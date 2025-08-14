@@ -7,6 +7,7 @@ data-loader/
 │ |── data_loader.py
 
   └── server.py
+  
 ├── scripts/ # SQL scripts, OS scripts
 
 ├── infrastructure/
@@ -18,6 +19,7 @@ data-loader/
 ├── requirements.txt
 
 └── README.md
+
 
 
 
