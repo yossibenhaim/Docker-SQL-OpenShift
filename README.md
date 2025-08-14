@@ -4,8 +4,8 @@ data-loader/
 
 ├── services/
 
-│ └── data_loader/ # Data loading service
-
+│ |── data_loader.py
+  └── server.py
 ├── scripts/ # SQL scripts, OS scripts
 
 ├── infrastructure/
@@ -17,4 +17,5 @@ data-loader/
 ├── requirements.txt
 
 └── README.md
+
 
