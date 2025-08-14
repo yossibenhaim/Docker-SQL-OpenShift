@@ -1,4 +1,4 @@
- ﻿# Docker-SQL-OpenShift
+## Docker-SQL-OpenShift
  
 data-loader/
 
@@ -19,6 +19,7 @@ data-loader/
 ├── requirements.txt
 
 └── README.md
+
 
 
 
