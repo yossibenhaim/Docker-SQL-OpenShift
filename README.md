@@ -12,7 +12,11 @@ data-loader/
 
      └──server.py
 
-├── scripts/ # SQL scripts, OS scripts
+├── scripts/ 
+
+   ├── create_table.sql
+
+   └── insert_people.sql
 
 ├── infrastructure/
 
