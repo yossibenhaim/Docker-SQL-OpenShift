@@ -12,6 +12,6 @@ bash-4.4$ cd //
 
 bash-4.4$ ls tmp
 
-mysql -uroot -p"1234" < /tmp/create_data.sql
-mysql -uroot -p"1234" < /tmp/insert_data.sql
+mysql -umyuser -pmypassword < /tmp/create_data.sql
 
+mysql -umyuser -pmypassword < /tmp/insert_people.sql
