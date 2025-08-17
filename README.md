@@ -1,4 +1,4 @@
-﻿# Docker-SQL-OpenShift
+### Docker-SQL-OpenShift
  
 data-loader/
 
@@ -17,6 +17,11 @@ data-loader/
    ├── create_table.sql
 
    └── insert_people.sql
+│ |── data_loader.py
+
+    └── server.py
+  
+├── scripts/ # SQL scripts, OS scripts
 
 ├── infrastructure/
 
@@ -27,4 +32,10 @@ data-loader/
 ├── requirements.txt
 
 └── README.md
+
+
+
+
+
+
 
