@@ -24,6 +24,3 @@ class DAL:
     def get_all_data(self):
         query = "select * from pepole"
         return self.get_query(query)
-
-a = DAL()
-print(a.get_query("select * from pepole"))
