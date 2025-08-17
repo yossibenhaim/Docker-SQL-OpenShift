@@ -4,7 +4,13 @@ data-loader/
 
 ├── services/
 
-│ └── data_loader/ # Data loading service
+  ├── dal
+    
+    └──dal.py
+    
+│ └── api_server
+
+     └──server.py
 
 ├── scripts/ # SQL scripts, OS scripts
 
