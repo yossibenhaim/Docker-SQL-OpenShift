@@ -4,8 +4,9 @@ class DAL:
 
     def __init__(self):
         self.mysql_conn = mysql.connector.connect(
-            host="localhost",
+            host="mysql",
             user="root",
+            password="1234",
             port=3306,
             database="data-loder")
 
