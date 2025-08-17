@@ -1,5 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from ..dal.dal import DAL
+import uvicorn
 
 
 app = FastAPI()
