@@ -1,6 +1,6 @@
-USE pepole;
+USE mydb;
 
-CREATE TABLE pepole (
+CREATE TABLE mydb (
     PersonID int,
     LastName varchar(255),
     FirstName varchar(255)
