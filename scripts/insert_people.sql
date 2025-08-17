@@ -1,5 +1,5 @@
-USE pepole;
+USE mydb;
 
 
-INSERT INTO pepole (PersonID, FirstName, LastName)
+INSERT INTO mydb (PersonID, FirstName, LastName)
 VALUES (3, 'chaim', 'shlom');

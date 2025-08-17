@@ -1,0 +1,17 @@
+ oc login --token=sha256~AIhlG5BwxmZlzk200XQNqyRKfUAJgIjqz2RnhYjEEzY --server=https://api.rm2.thpm.p1.openshiftapps.com:6443
+
+ oc   project  v0585204770-dev
+
+oc get pods
+
+oc cp . mysql-1-6hvx9:/tmp
+
+oc exec -it mysql-1-6hvx9 -- /bin/bash
+
+bash-4.4$ cd //
+
+bash-4.4$ ls tmp
+
+mysql -uroot -p"1234" < /tmp/create_data.sql
+mysql -uroot -p"1234" < /tmp/insert_data.sql
+

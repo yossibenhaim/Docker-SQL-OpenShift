@@ -1,1 +1,1 @@
-CREATE DATEBASE pepole;
+CREATE DATABASE mydb;

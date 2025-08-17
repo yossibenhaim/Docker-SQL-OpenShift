@@ -1,14 +1,15 @@
 import mysql.connector
 
+
 class DAL:
 
     def __init__(self):
         self.mysql_conn = mysql.connector.connect(
             host="mysql",
-            user="root",
-            password="1234",
+            user="myuser",
+            password='mypassword',
             port=3306,
-            database="data-loder")
+            database="mydb")
 
     def connect(self):
         self.my_cursor = self.mysql_conn.cursor()
@@ -23,5 +24,5 @@ class DAL:
         return people
 
     def get_all_data(self):
-        query = "select * from pepole"
+        query = "select * from mydb"
         return self.get_query(query)
