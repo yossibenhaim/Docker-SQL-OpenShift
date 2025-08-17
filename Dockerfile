@@ -6,6 +6,6 @@ COPY . /data-loader
 
 RUN pip install --no-cache-dir --upgrade -r /data-loader/requirements.txt
 
-EXPOSE 80
+EXPOSE 8000
 
-CMD ["uvicorn", "services/api_server/server.py:app", "--host", "0.0.0.0","--port", "80"]
+CMD ["uvicorn", "services/api_server/server.py:app", "--host", "0.0.0.0","--port", "8000"]
