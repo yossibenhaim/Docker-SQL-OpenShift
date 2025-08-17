@@ -4,7 +4,8 @@ WORKDIR /data-loader
 
 COPY . /data-loader
 
-RUN pip install --no-cache-dir --upgrade -r /data-loader/requirements.txt
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
 
 EXPOSE 8000
 
