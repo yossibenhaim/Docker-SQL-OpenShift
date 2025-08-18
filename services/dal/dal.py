@@ -1,37 +1,37 @@
-import mysql.connector
+from pymongo import MongoClient
+import datetime
 
 
 class DAL:
 
     def __init__(self):
-            self.host="mysql"
-            self.user="myuser"
-            self.password='mypassword'
-            self.port=3306
-            self.database="mydb"
+        self.client = None
 
     def connect(self):
-        self.mysql_conn = mysql.connector.connect(
-            host=self.host,
-            user=self.user,
-            password=self.password,
-            port=self.port,
-            database=self.database)
-        self.my_cursor = self.mysql_conn.cursor()
-
-    def get_query(self,query,value = ""):
-        self.connect()
-        self.my_cursor.execute(query,value)
-        result = self.my_cursor.fetchall()
-        return result
-
-
-    def get_all_data(self):
-        query = "select * from mydb"
-        result = self.get_query(query)
-        self.close_conn()
-        return result
+        self.client = MongoClient("mongodb://genuser:password@mongodb:27017/namegen")
 
     def close_conn(self):
-        self.my_cursor.close()
-        self.mysql_conn.close()
+        self.client.close()
+
+    def get_all_data(self):
+        self.insert_data()
+        self.connect()
+        collection = self.client.db["posts"]
+        data = list(collection.find())
+        self.close_conn()
+        return data
+
+    def get_data(self):
+        return {
+            "author": "Mike",
+            "text": "My first blog post!",
+            "tags": ["mongodb", "python", "pymongo"],
+            "date": datetime.datetime.now(tz=datetime.timezone.utc),
+        }
+
+    def insert_data(self):
+        self.connect()
+        post = self.get_data()
+        posts = self.client.db["posts"]
+        post_id = posts.insert_one(post).inserted_id
+        self.close_conn()

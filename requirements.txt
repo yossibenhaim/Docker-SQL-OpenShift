@@ -1,3 +1,4 @@
 mysql-connector-python~=9.2.0
 fastapi~=0.116.0
 uvicorn~=0.35.0
+pymongo~=4.14.0
